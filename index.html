@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Morgan — Developer & Designer</title>
+  <meta name="description" content="Portfolio of Alex Morgan — crafting high-quality digital experiences with modern web technologies.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alex Morgan — Developer & Designer">
+  <meta property="og:description" content="Crafting high-quality digital experiences with modern web technologies.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Particles -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">A<span class="nav__logo-accent">M</span></a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#testimonials" data-nav>Testimonials</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="hero">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+
+    <div class="hero__shapes">
+      <div class="shape-cube" data-speed="0.03">
+        <div class="face face--front"></div>
+        <div class="face face--back"></div>
+        <div class="face face--left"></div>
+        <div class="face face--right"></div>
+        <div class="face face--top"></div>
+        <div class="face face--bottom"></div>
+      </div>
+      <div class="shape-ring" data-speed="0.02"></div>
+      <div class="hero__dot hero__dot--1"></div>
+      <div class="hero__dot hero__dot--2"></div>
+      <div class="hero__dot hero__dot--3"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Open for freelance &amp; internships
+      </div>
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__name">Alex <span class="hero__name-accent">Morgan</span></h1>
+      <div class="hero__role">
+        <span id="typingTarget"></span><span class="typing-cursor"></span>
+      </div>
+      <p class="hero__desc">
+        I build fast, beautiful websites and apps that help businesses and ideas grow. Clean code, sharp design, real results.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          See My Work
+        </a>
+        <a href="#contact" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Get In Touch
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Turning Ideas Into Reality</h2>
+        <p class="section-subtitle">A developer who cares about craft, performance, and people.</p>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__img-wrap reveal-left">
+          <div class="about__img">
+            <div class="about__img-inner">AM</div>
+          </div>
+        </div>
+
+        <div class="about__text reveal-right">
+          <h3>Code meets design.</h3>
+          <p>
+            I'm a creative developer with a sharp eye for design and a love for
+            clean, efficient code. I bridge the gap between how things look and
+            how they work — building products that feel effortless to use.
+          </p>
+          <p>
+            When I'm not shipping features, you'll find me exploring new
+            tech, contributing to open source, and pushing pixels in Figma.
+            I believe great software starts with empathy.
+          </p>
+
+          <div class="about__stats">
+            <div class="stat">
+              <div class="stat__number" data-count="15">0</div>
+              <div class="stat__label">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number" data-count="2">0</div>
+              <div class="stat__label">Years Exp</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number" data-count="10">0</div>
+              <div class="stat__label">Clients</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">My Skills</span>
+        <h2 class="section-title">Technologies I Work With</h2>
+        <p class="section-subtitle">Always learning, always building.</p>
+      </div>
+
+      <div class="skills__grid stagger">
+        <!-- Frontend -->
+        <div class="skill-card stagger-item" data-tilt>
+          <div class="skill-card__shine"></div>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Frontend</h3>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>HTML &amp; CSS</span><span>95%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>JavaScript</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>React</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>Tailwind CSS</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="88"></div></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card stagger-item" data-tilt>
+          <div class="skill-card__shine"></div>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
+          </div>
+          <h3>Backend</h3>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>Node.js</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>Python</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>Express / Fastify</span><span>82%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>MongoDB / PostgreSQL</span><span>78%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="78"></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card stagger-item" data-tilt>
+          <div class="skill-card__shine"></div>
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Tools &amp; Design</h3>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>Git / GitHub</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>Figma</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>Docker</span><span>72%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__header"><span>AWS / Vercel</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="75"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">My Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A selection of recent work and side projects.</p>
+      </div>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+
+      <div class="projects__grid stagger">
+        <!-- 1 -->
+        <div class="project-card stagger-item" data-category="web" data-tilt>
+          <div class="project-card__shine"></div>
+          <div class="project-card__visual">
+            <div class="project-card__bg project-card__bg--1"></div>
+            <div class="project-card__overlay"></div>
+            <div class="project-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>ShopFlow — E-Commerce Platform</h3>
+            <p>Full-stack e-commerce with real-time inventory, Stripe payments, and admin dashboard.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">MongoDB</span><span class="project-tag">Stripe</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live</a>
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="project-card stagger-item" data-category="ai" data-tilt>
+          <div class="project-card__shine"></div>
+          <div class="project-card__visual">
+            <div class="project-card__bg project-card__bg--2"></div>
+            <div class="project-card__overlay"></div>
+            <div class="project-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z"/><path d="M16 12v1a4 4 0 01-8 0v-1"/><line x1="12" y1="17" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>InsightAI — Analytics Dashboard</h3>
+            <p>ML-powered analytics with predictive insights, custom reports, and live visualizations.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span><span class="project-tag">TensorFlow</span><span class="project-tag">React</span><span class="project-tag">D3.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live</a>
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="project-card stagger-item" data-category="mobile" data-tilt>
+          <div class="project-card__shine"></div>
+          <div class="project-card__visual">
+            <div class="project-card__bg project-card__bg--3"></div>
+            <div class="project-card__overlay"></div>
+            <div class="project-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>ConnectHub — Social Platform</h3>
+            <p>Modern social app with real-time chat, stories, and community features.</p>
+            <div class="project-tags">
+              <span class="project-tag">React Native</span><span class="project-tag">Firebase</span><span class="project-tag">Redux</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live</a>
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="project-card stagger-item" data-category="web" data-tilt>
+          <div class="project-card__shine"></div>
+          <div class="project-card__visual">
+            <div class="project-card__bg project-card__bg--4"></div>
+            <div class="project-card__overlay"></div>
+            <div class="project-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>EcoTrack — Sustainability App</h3>
+            <p>Track your carbon footprint, set goals, and discover eco-friendly alternatives.</p>
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live</a>
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="project-card stagger-item" data-category="design" data-tilt>
+          <div class="project-card__shine"></div>
+          <div class="project-card__visual">
+            <div class="project-card__bg project-card__bg--5"></div>
+            <div class="project-card__overlay"></div>
+            <div class="project-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>Luminara — Design System</h3>
+            <p>Comprehensive design system with 200+ components, dark mode, and a11y built-in.</p>
+            <div class="project-tags">
+              <span class="project-tag">Figma</span><span class="project-tag">Storybook</span><span class="project-tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live</a>
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="project-card stagger-item" data-category="ai" data-tilt>
+          <div class="project-card__shine"></div>
+          <div class="project-card__visual">
+            <div class="project-card__bg project-card__bg--6"></div>
+            <div class="project-card__overlay"></div>
+            <div class="project-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>NeuralWrite — AI Content Engine</h3>
+            <p>AI writing assistant that generates, edits, and optimizes content for any audience.</p>
+            <div class="project-tags">
+              <span class="project-tag">OpenAI</span><span class="project-tag">Next.js</span><span class="project-tag">Prisma</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live</a>
+              <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg> Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">Experience</span>
+        <h2 class="section-title">My Journey So Far</h2>
+        <p class="section-subtitle">Education and professional milestones.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__line"></div>
+
+        <div class="timeline__item reveal-left">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2024 — Present</span>
+            <h3>Freelance Developer</h3>
+            <h4>Self-employed</h4>
+            <p>Building custom web solutions for startups and small businesses. React, Node, and modern design systems.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-right">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2023 — 2024</span>
+            <h3>Frontend Developer Intern</h3>
+            <h4>TechStartup Inc.</h4>
+            <p>Built responsive UI components, implemented design systems, and shipped performance improvements for the SaaS platform.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-left">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2022 — 2023</span>
+            <h3>Open Source Contributor</h3>
+            <h4>Various Projects</h4>
+            <p>Contributed features, filed bugs, wrote docs — used by thousands of developers worldwide.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-right">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2021 — Present</span>
+            <h3>Computer Science Student</h3>
+            <h4>University</h4>
+            <p>Studying CS with a focus on web tech, algorithms, and software engineering. Active in coding clubs and hackathons.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-subtitle">Feedback from clients and collaborators.</p>
+      </div>
+
+      <div class="reveal-scale">
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card">
+              <div class="testimonial-card__quote">&ldquo;</div>
+              <p class="testimonial-card__text">
+                Alex delivered an exceptional website that exceeded our expectations. 
+                The attention to detail, smooth animations, and clean code were outstanding. 
+                Would definitely work together again.
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">SK</div>
+                <div class="testimonial-card__info">
+                  <h4>Sarah Kim</h4>
+                  <span>CEO, DesignStudio</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-card__quote">&ldquo;</div>
+              <p class="testimonial-card__text">
+                Working with Alex was a fantastic experience. They understood our vision 
+                immediately and built a platform that's both beautiful and fast. 
+                Our users love the redesign.
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">JR</div>
+                <div class="testimonial-card__info">
+                  <h4>James Rodriguez</h4>
+                  <span>Founder, TechVentures</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-card__quote">&ldquo;</div>
+              <p class="testimonial-card__text">
+                Incredible talent. Alex took our rough ideas and turned them into a polished 
+                product. The interactive elements really set our site apart.
+              </p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">MP</div>
+                <div class="testimonial-card__info">
+                  <h4>Maya Patel</h4>
+                  <span>Product Manager, InnovateCo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-nav">
+          <button class="slider-nav__btn" id="sliderPrev" aria-label="Previous">&#8592;</button>
+          <button class="slider-nav__btn" id="sliderNext" aria-label="Next">&#8594;</button>
+        </div>
+        <div class="slider-dots" id="sliderDots">
+          <button class="slider-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="slider-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="slider-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal-left">
+          <h3>Let's connect.</h3>
+          <p>Whether you have a project idea, a question, or just want to say hi — my inbox is always open.</p>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-item__text">
+              <h4>Email</h4>
+              <span>hello@alexmorgan.dev</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-item__text">
+              <h4>Location</h4>
+              <span>Remote — Worldwide</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-item__text">
+              <h4>Availability</h4>
+              <span>Open for freelance &amp; internships</span>
+            </div>
+          </div>
+
+          <div class="socials">
+            <a href="#" class="social" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="mailto:hello@alexmorgan.dev" class="social" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__form reveal-right">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" required>
+                <span class="form-error">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+                <span class="form-error">Please enter a valid email</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Project inquiry..." required>
+              <span class="form-error">Please enter a subject</span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+              <span class="form-error">Please enter your message</span>
+            </div>
+            <button type="submit" class="btn btn--primary form-submit" id="submitBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success__icon">&#10003;</div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. I'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2026 <a href="#hero">Alex Morgan</a>. Crafted with care.</p>
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
