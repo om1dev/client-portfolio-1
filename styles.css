@@ -127,8 +127,8 @@ body::after{
 @media(max-width:768px){
   .nav__toggle{display:flex}
   .nav__menu{
-    position:fixed;inset:0;z-index:1001;
-    background:rgba(5,5,8,.97);backdrop-filter:blur(30px);
+    position:fixed;top:0;left:0;width:100%;height:100vh;z-index:1001;
+    background:rgba(5,5,8,.97);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);
     flex-direction:column;justify-content:center;align-items:center;gap:28px;
     opacity:0;visibility:hidden;pointer-events:none;
     transition:opacity .35s var(--ease-out),visibility .35s;
@@ -136,6 +136,14 @@ body::after{
   .nav__menu.open{opacity:1;visibility:visible;pointer-events:auto}
   .nav__menu a{font-size:1.5rem;font-weight:600;color:var(--text-primary)}
   .nav__menu a::after{display:none}
+  /* Prevent nav backdrop-filter from creating a stacking context that traps the fixed menu */
+  .nav.scrolled{
+    backdrop-filter:none;-webkit-backdrop-filter:none;
+  }
+  .nav.scrolled::before{
+    content:'';position:absolute;inset:0;z-index:-1;
+    background:rgba(5,5,8,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  }
 }
 
 /* ============================================
